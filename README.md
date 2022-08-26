@@ -27,9 +27,9 @@ Python 3.9.7
 #How to run this tool?
 We advise you to set up a virtual environment so that Python 3 may be used to run this tool. Open your terminal or command prompt in the root folder and clone this repository.
 
-git clone https://github.com/plotly/dash-sample-apps
+```git clone https://github.com/plotly/dash-sample-apps
 cd dash-sample-apps/apps/dash-clinical-analytics
-python3 -m virtualenv venv
+python3 -m virtualenv venv```
 
 In Unix system:
 
