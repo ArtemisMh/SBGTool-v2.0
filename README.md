@@ -21,6 +21,9 @@ Developed by Zeynab (Artemis) Mohseni, Spring 2022
 SBGTool is split into three sections: __key metrics__, __overview__, and __detail__. The *key metrics* section gives broad information about the dataset to the teachers. By using *overview* that is a timeline-based section, teachers may get a comprehensive summary of the students' engagements and the number of correct/incorrect answers in different weeks of an academic year. *Detail* section contains a table, two bar charts, and three tabs with different visualizations. Teachers can use the table to filter and sort the features and extract detailed information about one student, a certain week, a subject, a user answer among the four answer choices, a correct answer among the four answer choices, result and the maximum and minimum answer durations. 
 The proposed bar charts in the left-hand side of the tool can be used by teachers to find the percentages of correct and incorrect answers, and the most difficult and easitest subjects. Furthermore, the visualizations presented in the three tabs allow teachers to group students based on their similar learning outcomes, compare the outcomes of two individual students, and find students with similar learning activities. 
 
+# Publication about SBGTool v2.0:
+http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1683809&dswid=-9264
+
 # Requirements
 Python 3.9.7
 
