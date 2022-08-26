@@ -24,25 +24,12 @@ The proposed bar charts in the left-hand side of the tool can be used by teacher
 # Requirements
 Python 3.9.7
 
-#How to run this tool?
-We advise you to set up a virtual environment so that Python 3 may be used to run this tool. Open your terminal or command prompt in the root folder and clone this repository.
+# How to run this tool?
+Create a folder called SBGTool in the root folder of your computer by opening the terminal or command prompt. All the files in this repository should be downloaded and placed in the SBGTool folder.
 
 ```
-git clone https://github.com/plotly/dash-sample-apps
-cd dash-sample-apps/apps/dash-clinical-analytics
-python3 -m virtualenv venv
-```
-
-In Unix system:
-
-```
-source venv/bin/activate
-```
-
-In Windows:
-
-```
-venv\Scripts\activate
+mkdir SBGTool
+cd SBGTool
 ```
 
 Install all required packages by running:
