@@ -1,0 +1,775 @@
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Banner
+- learn_button
+- Tabs
+- Main Dashboard Tab
+- Measurement Tab
+- Tables/Dropdown
+- Containers
+- Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#app-container * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  color: #2c2c2e;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  height: 100vh;
+  max-width: 100% !important;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+#big-app-container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 6rem;
+}
+
+.banner {
+  height: fit-content;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid white;
+  border-top: 10px solid white;
+  align-items: center;  /* all the components in the center, but if I remove it, the dropdown component will be resizable when we change the size of the page */
+  position: relative;
+  width: 100%;
+  padding: 1rem 5rem;
+  justify-content: space-between;
+
+}
+
+
+.banner h5 {
+  font-family: 'Open Sans Semi Bold', sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.banner h6 {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.banner button {
+  color: #2c2c2e;
+  margin-right: 10px;
+  height: 3rem;
+  line-height: 3rem;
+}
+
+#banner-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.banner button:hover {
+  color: #2c2c2e;
+  border-color: whitesmoke;
+}
+
+.banner Img {
+  height: 3rem;
+  margin: 0px 10px;
+}
+
+/* The learn_button (background) */
+.learn_button {
+  display: none; /*Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1005; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* learn_button Content/Box */
+.markdown-container {
+  width: 60vw;
+  margin: 10% auto;
+  padding: 10px 15px;
+  background-color: white;
+}
+
+.close-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+}
+
+.closeButton {
+  padding: 0 15px;
+  font-weight: normal;
+  float: right;
+  height: 100%;
+  border: none;
+}
+
+.closeButton:hover {
+  color: #2c2c2e;
+}
+
+/* Tabs
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#tabs {
+  width: 100%;
+}
+
+.custom-tabs {
+  background-color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  height: fit-content;
+  cursor: pointer;
+}
+
+#Specs-tab.custom-tab, #Control-chart-tab.custom-tab {
+  background-color: #b3c9ff;
+  letter-spacing: 1px;
+  color: inherit;
+  border: 0;
+  border-bottom: #e0e9ff solid 4px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 18px;
+
+}
+
+#Specs-tab.custom-tab--selected, #Control-chart-tab.custom-tab--selected {
+  border-bottom: #d6e2ff solid 20px !important;
+}
+
+#Specs-tab.custom-tab {
+  margin-right: 3px;
+}
+
+#Control-chart-tab.custom-tab {
+  margin-left: 3px;
+}
+
+.section-banner {
+  color: #2c2c2e;
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e0e7ff;
+}
+
+#quick-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-right: #e0e9ff solid 0.4rem;
+  align-items: center;
+  flex: 2 2;
+  max-width: 25%;
+}
+
+#Table-container {
+  border-top: #e0e9ff solid 0.4rem;
+  border-left: #e0e9ff solid 0.4rem;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+#LED-container {
+  border-top: #e0e9ff solid 0.4rem;
+  border-right: #e0e9ff solid 0.4rem;
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+
+
+#top-section-container {
+  z-index: 4;
+  border-top: #e0e9ff solid 0.2rem;
+  border-right: #e0e9ff solid 0.4rem;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+#control-chart-container1 {
+  z-index: 4;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  border-top: #e0e9ff solid 0.2rem;
+  border-right: #e0e9ff solid 0.4rem;
+  height: 100%;
+  display: flex;
+}
+
+#control-chart-container {
+  z-index: 4;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  border-right: #e0e9ff solid 0.4rem;
+  height: 100%;
+  display: flex;
+}
+
+#metric_header > div {
+  font-weight: bold;
+  font-size: 1.35rem;
+  line-height: 3rem;
+}
+
+#m_header_5 {
+  margin-top: 0rem !important;
+}
+
+.metric-row {
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center; /* vertical center row items*/
+}
+
+.metric-row:hover {
+  background-color: #93aeed;
+}
+
+/*Dash Daq Graduatebar */
+#Diameter_OOC_graph > div > div,
+#Etch1_OOC_graph > div > div,
+#Film-Thickness_OOC_graph > div > div,
+#Metric4_OOC_graph > div > div,
+#Etch2_OOC_graph > div > div,
+#Line-Width_OOC_graph > div > div,
+#Overlay_OOC_graph > div > div,
+#Volume_OOC_graph > div > div {
+  width: 100%;
+  background-color: white !important;
+}
+
+#quick-stats.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+#heatmap-x-y-axis {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 2rem 0rem 0rem;
+}
+
+
+#card-1, #card-2, #utility-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#card-1 {
+  margin-bottom: 3rem;
+}
+
+#utility-card {
+  height: 4rem !important;
+  margin-top: 2rem;
+}
+
+/* Tab1 content
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#set-specs-intro-container {
+  font-weight: bold;
+  margin: 8rem 5rem 1rem;
+  font-size: 1.6rem;
+}
+
+
+#metric-select-title {
+  color: #2c2c2e;
+}
+
+#button-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#value-setter-view-btn {
+  margin-left: 20px;
+}
+
+#value-setter-panel {
+  line-height: 2;
+}
+
+#value-setter-panel-header {
+  font-weight: bold;
+  color: #2c2c2e;
+  line-height: 1;
+  padding: 2rem 0;
+  border-bottom: 1px solid #e0e7ff;
+}
+
+#value-setter-panel-header > div {
+  text-align: right;
+}
+
+#value-setter-view-btn, #value-setter-set-btn {
+  border: 1px solid #e0e7ff;
+  color: #2c2c2e;
+}
+
+#value-setter-set-btn:hover, #value-setter-view-btn:hover {
+  color: #d6e2ff;
+  border-color: white;
+}
+
+#value-setter-panel-usl, #value-setter-panel-lsl, #value-setter-panel-ucl, #value-setter-panel-lcl {
+  padding: 1rem 0;
+}
+
+.output-datatable {
+  margin: 2rem 0rem 2rem 2rem;
+  line-height: 3;
+  align-self: flex-end;
+  width: 80%;
+}
+
+/*Dropdown*/
+.setting-input {
+  width: 100% !important;
+  height: 100%;
+}
+
+.react-numeric-input, .react-numeric-input input {
+  width: 100% !important;
+}
+
+.react-numeric-input input {
+  background-color: white !important;
+  border-color: #2c2c2e !important;
+  color: black !important;
+}
+
+.react-numeric-input b:nth-child(2) i {
+  border-color: transparent transparent black !important;
+}
+
+.react-numeric-input b:nth-child(3) i {
+  border-color: black transparent transparent !important;
+}
+
+
+/* Dropdown
+----------------------------------------------*/
+
+/*Dropdown items*/
+.Select-control, .Select-multi-value-wrapper, .Select-menu-outer div {
+  background-color: white;
+}
+
+/*Dropdown items*/
+.Select-control, .Select, .Select-value-label, .Select-clear-zone {
+  color: #2c2c2e;
+}
+
+
+/*Dropdown items*/
+.Select-menu-outer {
+  background-color: white;
+  border: 1px solid #2c2c2e !important;
+}
+
+/*Dropdown items*/
+.Select-menu-outer div:hover {
+  background-color:  #d6e2ff !important;
+  cursor: pointer;
+}
+
+/*Dropdown arrow + delete button*/
+.Select-control, .Select-control > span {
+  color: #2c2c2e;
+  background: white !important;
+}
+
+/*Placeholder*/
+.Select.has-value.Select--single > .Select-control .Select-value .Select-value-label, .Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
+  color: #2c2c2e !important;
+}
+
+/*Placeholder*/
+.Select--single > .Select-control .Select-value, .Select-placeholder {
+  /*border: 1px solid #2c2c2e;*/
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+
+
+.Select.is-focused:not(.is-open) > .Select-control {
+  border-color: #d6e2ff !important;
+}
+
+/* Container
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#app-container {
+  background: white;
+  margin: 1rem 2rem;
+  max-width: 100%;
+  width: 100%;
+  height: calc(100vh - 10rem - 1px);
+}
+
+#app-content {
+  background: inherit;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+#settings-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin: 4rem 5rem 1rem;
+}
+
+#metric-select-menu {
+  flex: 1 1 0;
+}
+
+#value-setter-menu {
+  flex: 1 1 30%;
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#status-container {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+#graphs-container {
+  display: flex;
+  flex-direction: column;
+  flex: 3 1;
+  max-width: calc(75%);
+  width: 100%;
+}
+
+
+/* Tab 2 Quick stats
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+#operator-led {
+  width: 200px;
+}
+
+#operator-led > div {
+  width: 80%;
+  margin: auto;
+}
+
+#operator-led > div > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#operator-led > div > div svg:nth-child(1) {
+  margin-left: -1rem;
+}
+
+#progress-gauge > div, #progress-gauge > div > div, #progress-gauge > div > div > div {
+  width: 100%;
+  text-align: center;
+}
+
+#progress-gauge svg {
+  width: 80%;
+  height: auto;
+}
+
+#progress-gauge > div > div > div > div {
+  color: #2c2c2e !important;
+}
+
+/*pressure-gauge track*/
+.eUJyCY .track {
+  stroke: #f4d44d !important;
+  stroke-width: 10;
+}
+
+.eUJyCY .track.progress {
+  stroke: #fff3c5 !important;
+}
+
+/* Tab 2 Specs
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#card-1 P, #card-2 P {
+  color: inherit;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+#card-2 .scale, #card-2 .needle, #card-2 .needle-knob {
+  display: none !important;
+}
+
+/* Tab 2 metric row
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.metric-row-button {
+  border: none;
+  padding: 0px 0px;
+  color: #2c2c2e;
+  font-size: 1rem;
+  letter-spacing: 0.02rem;
+}
+
+.metric-row-button:hover {
+  border: none;
+  color: white !important;
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles / ipad (Portrait)
+  */
+@media only screen and (max-width: 950px) {
+
+  body {
+    font-size: 1.3rem;
+  }
+
+  #big-app-container {
+    padding: 1rem;
+  }
+
+  .banner {
+    flex-direction: column-reverse;
+    padding: 1rem 0.5rem;
+  }
+
+  #banner-text {
+    text-align: center;
+  }
+
+  .banner h5 {
+    font-size: 1.4rem;
+  }
+
+  .banner h6 {
+    font-size: 1.3rem;
+  }
+
+  #banner-logo button {
+    display: none;
+  }
+
+  .banner Img {
+    height: 3rem;
+    margin: 1rem;
+  }
+
+  #app-container {
+    height: auto;
+  }
+
+  #set-specs-intro-container {
+    margin: 4rem 2rem 0rem 2rem;
+    font-size: inherit;
+  }
+
+  #settings-menu {
+    margin: 2rem;
+    flex-direction: column;
+  }
+
+  #settings-menu > div {
+    width: 100%;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+    margin: 2rem 0rem;
+  }
+
+  #value-setter-panel-header {
+    display: none;
+  }
+
+  #button-div {
+    display: block;
+    text-align: center;
+  }
+
+  #button-div button {
+    margin: 1rem auto;
+    display: block;
+  }
+
+  .output-datatable {
+    align-self: center;
+    margin: 2rem;
+  }
+
+  #status-container, #top-section-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #quick-stats {
+    max-width: 100%;
+  }
+
+  #graphs-container {
+    flex: 1;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #top-section-container > div {
+    width: 100%;
+    height: auto;
+  }
+
+  #card-1 P, #card-2 P {
+    align-self: auto;
+  }
+
+  #quick-stats {
+    border-right: none;
+  }
+  
+}
+
+@media only screen and (max-width: 600px) {
+  /* Display measurement row contents block-level on mobile*/
+  /** Display every row content in block*!*/
+  #metric_header {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+
+  #value-setter-panel {
+    line-height: 2.5;
+  }
+
+  .metric-row {
+    flex-direction: column;
+    height: fit-content !important;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px solid #e0e9ff;
+    border-bottom: 1px solid #e0e9ff;
+  }
+
+
+  /** Attach header vertically to table */
+  .metric-row > div {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  /*Hide Sparkline*/
+  .metric-row > div:nth-of-type(3) {
+    display: none;
+  }
+
+  .metric-row > div:nth-of-type(6) > div {
+    margin-top: 6.5px !important;
+  }
+
+  /*Add table header column*/
+  .metric-row > div:nth-of-type(1):before {
+    content: "Parameter";
+  }
+
+  .metric-row > div:nth-of-type(2):before {
+    content: "Total Measurement";
+  }
+
+  .metric-row > div:nth-of-type(3):before {
+    content: "   ";
+  }
+
+  .metric-row > div:nth-of-type(4):before {
+    content: "OOC %";
+  }
+
+  .metric-row > div:nth-of-type(5) {
+    margin-top: 0 !important;
+  }
+
+  .metric-row > div:nth-of-type(5):before {
+    content: "Out of Control";
+  }
+
+  .metric-row > div:nth-of-type(6):before {
+    content: "Pass / Fail";
+  }
+
+  .output-datatable {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #Specs-tab.custom-tab {
+    margin-right: 0;
+  }
+
+  #Control-chart-tab.custom-tab {
+    margin-left: 0;
+  }
+}
