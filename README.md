@@ -33,17 +33,19 @@ python3 -m virtualenv venv```
 
 In Unix system:
 
-source venv/bin/activate
+```source venv/bin/activate```
 
 In Windows:
 
-venv\Scripts\activate
+```venv\Scripts\activate```
+
 Install all required packages by running:
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
+
 Run this app locally with:
 
-python app.py
+```python app.py```
 
 
 As follow you can see a picture of the last version of the tool.
