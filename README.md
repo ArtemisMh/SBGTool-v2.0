@@ -53,6 +53,6 @@ Run this app locally with:
 ```
 
 
-As follow you can see a picture of the last version of the tool.
+# Screenshot
 
 ![GitHub Logo](/SBGTool.png)
