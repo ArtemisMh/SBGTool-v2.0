@@ -29,23 +29,28 @@ We advise you to set up a virtual environment so that Python 3 may be used to ru
 
 ```git clone https://github.com/plotly/dash-sample-apps
 cd dash-sample-apps/apps/dash-clinical-analytics
-python3 -m virtualenv venv```
+python3 -m virtualenv venv
+```
 
 In Unix system:
 
-```source venv/bin/activate```
+```source venv/bin/activate
+```
 
 In Windows:
 
-```venv\Scripts\activate```
+```venv\Scripts\activate
+```
 
 Install all required packages by running:
 
-```pip install -r requirements.txt```
+```pip install -r requirements.txt
+```
 
 Run this app locally with:
 
-```python app.py```
+```python app.py
+```
 
 
 As follow you can see a picture of the last version of the tool.
