@@ -1,5 +1,5 @@
 # SBGTool v2.0
-produced by Zeynab (Artemis) Mohseni, Spring 2022
+Developed by Zeynab (Artemis) Mohseni, Spring 2022
 
 # What is Similarity-Based Grouping Tool (SBGTool) about?
 
