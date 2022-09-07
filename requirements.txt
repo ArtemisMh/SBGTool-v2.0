@@ -1,22 +1,15 @@
-Flask-PyMongo
-flask_cors
+os
+dash
+dash_bio
+dash_daq 
+pandas 
 numpy
-pandas
-joblib
 scikit-learn
-scikit-learn-extra
-sk-dist
-mlxtend
-umap-learn
-eli5
-imblearn
+sklearn
+"dask[dataframe]"
+plotly  	
+"notebook>=5.3" "ipywidgets>=7.2"
+dash-bio
+pathlib
+joblib
 
-python3 -m pip install dash
-	pip3 install dash_daq 
-	pip3 install pandas 
-	pip3 install sklearn
-	pip3 install "dask[dataframe]"
-	pip3 install plotly  					 #==4.14.0
-	pip3 install dash   					 #==1.6.1
-	# pip3 install "notebook>=5.3" "ipywidgets>=7.2"
-	pip install dash-bio==0.4.8
